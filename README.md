@@ -13,3 +13,10 @@ Then select time frame for OTP code generation. You can use 30, 60 and 90 second
 Finally select the OTP code digit count. 6 and 8 can be selected.
 
 Your OTP codes will be listed on the main screen and will be updated automatically.
+
+![1](./1.png)
+![2](./2.png)
+![3](./3.png)
+![4](./4.png)
+![5](./5.png)
+![7](./7.png)
