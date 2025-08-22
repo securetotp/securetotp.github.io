@@ -61,10 +61,10 @@
     }
     .image-gallery img {
       width: 100%;
+      height: auto; /* maintain full height ratio */
       border-radius: 6px;
       box-shadow: 0 2px 6px rgba(0,0,0,0.15);
-      object-fit: cover;
-      height: 140px;
+      object-fit: contain;
     }
     footer {
       text-align: center;
@@ -115,12 +115,15 @@
     <p>OTP kodlarınız ana ekranda listelenecek ve otomatik olarak güncellenecektir.</p>
 
     <h3>Uygulama Resimleri</h3>
-    <p><img src="./1.png" alt="1" width=400>
-<img src="./2.png" alt="2" width=400>
-<img src="./3.png" alt="3" width=400>
-<img src="./4.png" alt="4" width=400>
-<img src="./5.png" alt="5" width=400>
-<img src="./7.png" alt="7" width=400></p>
+<div class="image-gallery">
+  <img src="./1.png" alt="1">
+  <img src="./2.png" alt="2">
+  <img src="./3.png" alt="3">
+  <img src="./4.png" alt="4">
+  <img src="./5.png" alt="5">
+  <img src="./7.png" alt="7">
+</div>
+
   </section>
 
   <section id="privacy">
@@ -174,11 +177,9 @@
       e.preventDefault();
       const target = link.getAttribute('data-target');
 
-      // link aktifliğini ayarla
       links.forEach(l => l.classList.remove('active'));
       link.classList.add('active');
 
-      // bölümleri göster/gizle
       sections.forEach(section => {
         if(section.id === target) {
           section.classList.add('active');
